@@ -132,3 +132,29 @@ def test_add_two_tasks(page: Page):
     expect(task_items.locator("label")).to_have_text(
         ["Read the instructions", "Practise the examples"]
     )
+
+
+
+def test_save_edit_with_enter(page: Page):
+    page.goto(URL)
+    task_items = page.locator(".todo-list li")
+
+    # Add the original task
+    add_task(page, "Buy milk")
+    task_items.first.locator("label").dblclick()
+    edit_box = task_items.first.locator(".edit")
+
+    # Change the name and save with Enter
+    edit_box.fill("Buy bread")
+    edit_box.press("Enter")
+
+    # Check there is still one row
+    expect(task_items).to_have_count(1)
+
+    # Check only the new name remains
+    expect(task_items.locator("label")).to_have_text(["Buy bread"])
+
+    page.screenshot(
+        path="docs/evidence/member-1/extra-test-1-edit-task.png",
+        full_page=True,
+    )
