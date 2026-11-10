@@ -158,3 +158,36 @@ def test_save_edit_with_enter(page: Page):
         path="docs/evidence/member-1/extra-test-1-edit-task.png",
         full_page=True,
     )
+
+
+
+
+def test_clear_completed_from_mixed_list(page: Page):
+    page.goto(URL)
+    task_items = page.locator(".todo-list li")
+
+    # Add three tasks
+    add_task(page, "Wash dishes")
+    add_task(page, "Do laundry")
+    add_task(page, "Take out trash")
+
+    # Check there are 3 rows
+    expect(task_items).to_have_count(3)
+
+    # Complete the 1st and 3rd task
+    task_items.nth(0).get_by_role("checkbox").check()
+    task_items.nth(2).get_by_role("checkbox").check()
+
+    # Click the Clear completed button
+    page.get_by_role("button", name="Clear completed").click()
+
+    # Check there is 1 row left
+    expect(task_items).to_have_count(1)
+
+    # Check only the active task remains
+    expect(task_items.locator("label")).to_have_text(["Do laundry"])
+
+    page.screenshot(
+        path="docs/evidence/member-1/extra-test-2-clear-completed.png",
+        full_page=True,
+    )
