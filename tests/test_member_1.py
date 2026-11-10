@@ -1,3 +1,4 @@
+import pytest
 from playwright.sync_api import Page, expect
 
 URL = "https://demo.playwright.dev/todomvc/"
@@ -48,3 +49,26 @@ def test_complete_task(page: Page):
     expect(task_items.locator("label")).to_have_text(
         ["Practise automated testing"]
     )
+
+
+
+@pytest.mark.parametrize(
+    "task_text",
+    ["", " ", "   "],
+    ids=["empty", "one-space", "three-spaces"],
+)
+def test_blank_task_is_not_added(page: Page, task_text: str):
+    page.goto(URL)
+
+    task_input = page.get_by_placeholder(
+        "What needs to be done?",
+        exact=True,
+    )
+    task_items = page.locator(".todo-list li")
+
+    expect(task_items).to_have_count(0)
+
+    task_input.fill(task_text)
+    task_input.press("Enter")
+
+    expect(task_items).to_have_count(0)
