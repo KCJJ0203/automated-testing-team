@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="10" failures="0" skipped="0" tests="10" time="2.049" timestamp="2026-11-13T12:29:45.277865+08:00" hostname="Naix"><testcase classname="tests.test_member_4" name="test_add_task[chromium]" time="0.257"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_complete_task[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-empty]" time="0.000"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-one-space]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-three-spaces]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_login_with_correct_details[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_login_with_incorrect_password[chromium]" time="0.000"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_add_two_tasks[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_extra_scenario_one[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_extra_scenario_two[chromium]" time="0.013"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+
+    @pytest.fixture(scope="session")
+    def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
+&gt;       browser = launch_browser()
+                  ^^^^^^^^^^^^^^^^
+
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:534: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\pytest_playwright\pytest_playwright.py:526: in launch
+    browser = browser_type.launch(**launch_options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:4113: in launch
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:387: in finish
+    raise e from None
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:352: in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\utils\zones.py:58: in run_async
+    return await func()
+           ^^^^^^^^^^^^
+.venv\Lib\site-packages\playwright\_impl\browser_type.py:176: in launch
+    await self._channel.launch(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+
+    async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
+        # Python: the result of a channel call, mapped by the generated channel method.
+&gt;       return mapper(await awaitable)
+                      ^^^^^^^^^^^^^^^
+E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase></testsuite></testsuites>
