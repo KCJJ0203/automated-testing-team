@@ -128,3 +128,59 @@ def test_add_two_tasks(page: Page):
     expect(task_items.locator("label")).to_have_text(
         ["Read the instructions", "Practise the examples"]
     )
+
+
+def test_delete_active_task(page: Page):
+    page.goto(URL)
+    task_items = page.locator(".todo-list li")
+
+    expect(task_items).to_have_count(0)
+
+    add_task(page, "Water the plants")
+    add_task(page, "Feed the cat")
+
+    expect(task_items).to_have_count(2)
+
+    task_to_delete = task_items.filter(has_text="Water the plants")
+    expect(task_to_delete.get_by_role("checkbox")).not_to_be_checked()
+
+    task_to_delete.hover()
+    task_to_delete.get_by_role("button", name="Delete").click()
+
+    expect(task_items).to_have_count(1)
+    expect(task_items.locator("label")).to_have_text(["Feed the cat"])
+
+    page.screenshot(
+        path="docs/evidence/member-3/extra-test-1-delete-active-task.png",
+        full_page=True,
+    )
+
+
+def test_active_filter_hides_completed_task(page: Page):
+    page.goto(URL)
+    task_items = page.locator(".todo-list li")
+
+    expect(task_items).to_have_count(0)
+
+    add_task(page, "Read a chapter")
+    add_task(page, "Write a summary")
+    add_task(page, "Plan the weekend")
+
+    expect(task_items).to_have_count(3)
+
+    finished_task = task_items.filter(has_text="Read a chapter")
+    finished_checkbox = finished_task.get_by_role("checkbox")
+    finished_checkbox.check()
+    expect(finished_checkbox).to_be_checked()
+
+    page.get_by_role("link", name="Active", exact=True).click()
+
+    expect(task_items).to_have_count(2)
+    expect(task_items.locator("label")).to_have_text(
+        ["Write a summary", "Plan the weekend"]
+    )
+
+    page.screenshot(
+        path="docs/evidence/member-3/extra-test-2-active-filter.png",
+        full_page=True,
+    )
