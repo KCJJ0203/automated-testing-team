@@ -68,14 +68,36 @@ def test_add_two_tasks(page: Page):
         ["Read the instructions", "Practise the examples"]
     )
 
-def test_extra_scenario_one(page: Page):
+def test_tasks_stay_after_refresh(page: Page):
     page.goto(URL)
-    add_task(page, "Task to delete")
+    task_input = page.get_by_placeholder("What needs to be done?", exact=True)
     task_items = page.locator(".todo-list li")
+    
+    task_input.fill("Task to persist")
+    task_input.press("Enter")
     expect(task_items).to_have_count(1)
-    page.screenshot(path="docs/evidence/member-4/extra-test-1-delete-task.png", full_page=True)
+    
+    page.reload()
+    
+    expect(task_items).to_have_count(1)
+    expect(task_items.locator("label")).to_have_text(["Task to persist"])
+    
+    page.screenshot(
+        path="docs/evidence/member-4/extra-test-1-refresh.png",
+        full_page=True,
+    )
 
-def test_extra_scenario_two(page: Page):
-    page.goto(URL)
-    add_task(page, "Task for filter")
-    page.screenshot(path="docs/evidence/member-4/extra-test-2-active-filter.png", full_page=True)
+def test_login_with_incorrect_username(page: Page):
+    page.goto("https://the-internet.herokuapp.com/login")
+    
+    page.get_by_label("Username").fill("wronguser")
+    page.get_by_label("Password").fill("SuperSecretPassword!")
+    page.get_by_role("button", name="Login").click()
+    
+    expect(page.get_by_text("Your username is invalid!")).to_be_visible()
+    expect(page.get_by_role("button", name="Login")).to_be_visible()
+    
+    page.screenshot(
+        path="docs/evidence/member-4/extra-test-2-wrong-username.png",
+        full_page=True,
+    )
