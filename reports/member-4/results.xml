@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="10" failures="0" skipped="0" tests="10" time="2.049" timestamp="2026-11-13T12:29:45.277865+08:00" hostname="Naix"><testcase classname="tests.test_member_4" name="test_add_task[chromium]" time="0.257"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="10" failures="0" skipped="0" tests="10" time="2.001" timestamp="2026-11-13T12:34:24.694740+08:00" hostname="Naix"><testcase classname="tests.test_member_4" name="test_add_task[chromium]" time="0.332"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -24,16 +24,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_complete_task[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_complete_task[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -59,16 +60,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-empty]" time="0.000"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-empty]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -94,16 +96,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-one-space]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-one-space]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -129,16 +132,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-three-spaces]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_blank_task_is_not_added[chromium-three-spaces]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -164,16 +168,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_login_with_correct_details[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_login_with_correct_details[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -199,16 +204,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_login_with_incorrect_password[chromium]" time="0.000"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_login_with_incorrect_password[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -234,16 +240,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_add_two_tasks[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_add_two_tasks[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -269,16 +276,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_extra_scenario_one[chromium]" time="0.001"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_extra_scenario_one[chromium]" time="0.000"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -304,16 +312,17 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
-.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_extra_scenario_two[chromium]" time="0.013"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel &quot;%TEST_BROWSER%&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001544A6F61F0&gt;
+.venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase><testcase classname="tests.test_member_4" name="test_extra_scenario_two[chromium]" time="0.014"><error message="failed on setup with &quot;playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe&#10;Run &quot;playwright install chrome&quot;&quot;">launch_browser = &lt;function launch_browser.&lt;locals&gt;.launch at 0x000001C11D438040&gt;
 
     @pytest.fixture(scope="session")
     def browser(launch_browser: Callable[[], Browser]) -&gt; Generator[Browser, None, None]:
@@ -339,13 +348,14 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     await self._channel.launch(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-awaitable = &lt;Future finished exception=Error('Unsupported chromium channel "%TEST_BROWSER%"')&gt;
-mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001544A7C12D0&gt;
+awaitable = &lt;Future finished exception=Error('Chromium distribution \'chrome\' is not found at C:\\Users\\Proga\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe\nRun "playwright install chrome"')&gt;
+mapper = &lt;function BrowserTypeChannel.launch.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C11D62B270&gt;
 
     async def _mapped(awaitable: Awaitable[Any], mapper: Callable[[Any], Any]) -&gt; Any:
         # Python: the result of a channel call, mapped by the generated channel method.
 &gt;       return mapper(await awaitable)
                       ^^^^^^^^^^^^^^^
-E       playwright._impl._errors.Error: BrowserType.launch: Unsupported chromium channel "%TEST_BROWSER%"
+E       playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'chrome' is not found at C:\Users\Proga\AppData\Local\Google\Chrome\Application\chrome.exe
+E       Run "playwright install chrome"
 
 .venv\Lib\site-packages\playwright\_impl\channel_owner.py:398: Error</error></testcase></testsuite></testsuites>
